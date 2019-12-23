@@ -1,5 +1,11 @@
-import app from '../app';
+var express = require('express');
+var app = express();
 
-app.listen(3000, function () {
+app.get('/', function (req, res) {
+  res.json({ title: 'Kubernetes' });
+});
+
+
+app.listen(3333, function () {
   console.log('Example app listening on port 3000!');
 });

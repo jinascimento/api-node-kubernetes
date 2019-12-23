@@ -14,4 +14,4 @@ COPY --chown=node:node . .
 
 EXPOSE 3333
 
-CMD ["node", "src/index"]
+CMD ["node", "src/server.js"]

@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-to-kubernetes
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      name: api-to-kubernetes
+  template:
+    metadata:
+      labels:
+        name: api-to-kubernetes
+    spec:
+      containers:
+        - name: application
+          image: jhonydocker/kubernetes-teste:1.0.4
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
